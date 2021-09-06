@@ -3,15 +3,14 @@
 char matrix[] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'}; // the square's numbers
 char player1[16];  //variable to hold player 1's name
 char player2[16];  //variable to hold player 2's name
-char choose[20], mark;
-int state = 1, playerSelec = 1, gameStart = 1, winner = 0, gameRunning = 1;
+char choose[20], mark;   //the input, X/O
+int state = 1, playerSelec = 1, gameStart = 1, winner = 0, gameRunning = 1; //true or false guides
 
 int i;
 
 void table();      //declaring the squares design's function
-void wrong();
-void selecCheck();
-void winCheck();
+void selecCheck(); //function to check if the validity of the input
+void winCheck();   //function to check if a player is won
 
 int main()
 {
@@ -20,7 +19,7 @@ int main()
     printf("player 2 :");
     scanf("%s", &player2);   //getting the player 2's name
 
-    table();
+    table();     //initializing the table
 
     do
     {
